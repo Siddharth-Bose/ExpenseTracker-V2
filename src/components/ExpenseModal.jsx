@@ -11,7 +11,8 @@ function ExpenseModal({
   onSubmit,
   mode,
 }) {
-  const handleSubmit = () => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
     if (
       !expenseData.title ||
       !expenseData.amount ||
@@ -39,49 +40,51 @@ function ExpenseModal({
       overlayClassName="custom-overlay"
     >
       <h2>{mode === "edit" ? "Edit Expense" : "Add Expense"}</h2>
-      <div className="row">
-        <input
-          type="text"
-          placeholder="Title"
-          value={expenseData.title}
-          onChange={(e) =>
-            setExpenseData({ ...expenseData, title: e.target.value })
-          }
-        />
-        <input
-          type="number"
-          placeholder="Price"
-          value={expenseData.amount}
-          onChange={(e) =>
-            setExpenseData({ ...expenseData, amount: e.target.value })
-          }
-        />
-      </div>
-      <div className="row">
-        <input
-          type="text"
-          placeholder="Category"
-          value={expenseData.category}
-          onChange={(e) =>
-            setExpenseData({ ...expenseData, category: e.target.value })
-          }
-        />
-        <input
-          type="date"
-          value={expenseData.date}
-          onChange={(e) =>
-            setExpenseData({ ...expenseData, date: e.target.value })
-          }
-        />
-      </div>
-      <div className="row">
-        <button onClick={handleSubmit} className="cta-btn">
-          Add Expense
-        </button>
-        <button onClick={onClose} className="cancel-btn">
-          Cancel
-        </button>
-      </div>
+      <form className="row" onSubmit={(e) => handleSubmit(e)}>
+        <div className="row">
+          <input
+            type="text"
+            placeholder="Title"
+            value={expenseData.title}
+            onChange={(e) =>
+              setExpenseData({ ...expenseData, title: e.target.value })
+            }
+          />
+          <input
+            type="number"
+            placeholder="Price"
+            value={expenseData.amount}
+            onChange={(e) =>
+              setExpenseData({ ...expenseData, amount: e.target.value })
+            }
+          />
+        </div>
+        <div className="row">
+          <input
+            type="text"
+            placeholder="Category"
+            value={expenseData.category}
+            onChange={(e) =>
+              setExpenseData({ ...expenseData, category: e.target.value })
+            }
+          />
+          <input
+            type="date"
+            value={expenseData.date}
+            onChange={(e) =>
+              setExpenseData({ ...expenseData, date: e.target.value })
+            }
+          />
+        </div>
+        <div className="row">
+          <button className="cta-btn" type="submit">
+            Add Expense
+          </button>
+          <button onClick={onClose} className="cancel-btn">
+            Cancel
+          </button>
+        </div>
+      </form>
     </Modal>
   );
 }

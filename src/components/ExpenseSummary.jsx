@@ -27,7 +27,8 @@ function ExpenseSummary() {
     date: "",
   });
 
-  const handleAddIncome = () => {
+  const handleAddIncome = (e) => {
+    e.preventDefault();
     if (!incomeAmount || isNaN(incomeAmount))
       return alert("Enter valid amount");
     addWalletBalance(parseFloat(incomeAmount));
@@ -71,14 +72,14 @@ function ExpenseSummary() {
         overlayClassName="custom-overlay"
       >
         <h2>Add Income</h2>
-        <div className="row">
+        <form className="row" onSubmit={(e) => handleAddIncome(e)}>
           <input
             type="number"
-            placeholder="Enter amount"
+            placeholder="Income Amount"
             value={incomeAmount}
             onChange={(e) => setIncomeAmount(e.target.value)}
           />
-          <button onClick={handleAddIncome} className="cta-btn">
+          <button type="submit" className="cta-btn">
             Add Balance
           </button>
           <button
@@ -87,7 +88,7 @@ function ExpenseSummary() {
           >
             Cancel
           </button>
-        </div>
+        </form>
       </Modal>
 
       {/* Expense Modal */}
