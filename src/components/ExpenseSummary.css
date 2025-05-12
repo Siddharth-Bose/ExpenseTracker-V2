@@ -68,8 +68,7 @@
   padding: 0 0.5rem;
   box-shadow: 0px 4px 4px 0px #00000040;
   border-radius: 15px;
-  max-width: 75%;
-  min-width: 20em;
+  width:50%;
   height: 3em;
   color: #000;
   border: none;

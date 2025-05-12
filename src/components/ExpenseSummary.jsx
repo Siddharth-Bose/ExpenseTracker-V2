@@ -72,22 +72,24 @@ function ExpenseSummary() {
         overlayClassName="custom-overlay"
       >
         <h2>Add Income</h2>
-        <form className="row" onSubmit={(e) => handleAddIncome(e)}>
-          <input
-            type="number"
-            placeholder="Income Amount"
-            value={incomeAmount}
-            onChange={(e) => setIncomeAmount(e.target.value)}
-          />
-          <button type="submit" className="cta-btn">
-            Add Balance
-          </button>
-          <button
-            onClick={() => setIsIncomeModalOpen(false)}
-            className="cancel-btn"
-          >
-            Cancel
-          </button>
+        <form onSubmit={(e) => handleAddIncome(e)}>
+          <div className="row">
+            <input
+              type="number"
+              placeholder="Income Amount"
+              value={incomeAmount}
+              onChange={(e) => setIncomeAmount(e.target.value)}
+            />
+            <button type="submit" className="cta-btn">
+              Add Balance
+            </button>
+            <button
+              onClick={() => setIsIncomeModalOpen(false)}
+              className="cancel-btn"
+            >
+              Cancel
+            </button>
+          </div>
         </form>
       </Modal>
 
