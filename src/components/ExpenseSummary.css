@@ -52,9 +52,9 @@
   gap: 1em;
 }
 
-.row > * {
+/* .row > * {
   flex: 1;
-}
+} */
 
 .custom-modal h2 {
   margin-bottom: 1rem;
