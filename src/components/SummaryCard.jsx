@@ -24,7 +24,7 @@ function SummaryCard({
     <div className="card">
       {/* Card header containing the title and amount */}
       <div className="card-header">
-        <h2>{`${title}: `}</h2> {/* Display the title */}
+        <h2 className="title">{`${title}: `}</h2> {/* Display the title */}
         <h2 className={`${amountClass} summary-amount`}>{`₹${amount}`}</h2> {/* Display the amount with dynamic class */}
       </div>
       {/* Button with dynamic label and styling */}

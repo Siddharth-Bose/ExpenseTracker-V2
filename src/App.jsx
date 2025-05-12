@@ -18,7 +18,7 @@ import TopExpenses from "./components/TopExpenses";
 function App() {
   return (
     <div className="app-container">
-      <h1>Expense Tracker</h1>
+      <h1 style={{ color: "#fff" }}>Expense Tracker</h1>
 
       {/* Displays summary of expenses */}
       <ExpenseSummary />

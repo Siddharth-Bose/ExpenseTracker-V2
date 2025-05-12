@@ -25,6 +25,7 @@
 .card h2 {
   font-size: 1.5em;
   margin: 0;
+  color: #fff;
 }
 
 /* Button Styling */
@@ -54,11 +55,11 @@
 
 /* Text color classes for different types of amounts */
 .text-income {
-  color: #9dff5b;
+  color: #9dff5b !important;
 }
 
 .text-expense {
-  color: #f4bb4a;
+  color: #f4bb4a !important;
 }
 
 /* Responsive Design */

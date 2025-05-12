@@ -16,7 +16,7 @@ const TopExpenses = () => {
 
   return (
     <div className="top-expenses">
-      <h2 style={{ fontStyle: "italic" }}>Top Expenses</h2>
+      <h2 style={{ fontStyle: "italic", color: "#fff" }}>Top Expenses</h2>
       <div className="inner-top">
         {expenses.length > 0 ? (
           chartData.map((item, idx) => (
