@@ -1,0 +1,17 @@
+.custom-pie-container {
+  width: 350px;
+  height: 350px;
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media (min-width: 768px) {
+  .custom-pie-container {
+    width: 250px;
+    height: 250px;
+  }
+}

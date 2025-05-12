@@ -1,0 +1,48 @@
+.expense-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100px;
+  border-bottom: 2px solid #9b9b9b;
+}
+
+.expense-left {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.expense-icon {
+  border-radius: 50%;
+  background: #d9d9d9;
+  height: 2.5rem;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.expense-details {
+  display: flex;
+  flex-direction: column;
+  gap: 0.1rem;
+}
+
+.expense-details h3,
+.expense-details h4 {
+  color: #000;
+  margin: 0;
+}
+
+.expense-right {
+  display: flex;
+  gap: 1em;
+  align-items: center;
+}
+
+.expense-amount {
+  color: #f4bb4a;
+  font-weight: 700;
+  margin: 0;
+  line-height: 100%;
+}
