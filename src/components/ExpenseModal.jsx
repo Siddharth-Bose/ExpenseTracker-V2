@@ -45,6 +45,7 @@ function ExpenseModal({
           <input
             type="text"
             placeholder="Title"
+            name="title"
             value={expenseData.title}
             onChange={(e) =>
               setExpenseData({ ...expenseData, title: e.target.value })
@@ -52,6 +53,7 @@ function ExpenseModal({
           />
           <input
             type="number"
+            name="price"
             placeholder="Price"
             value={expenseData.amount}
             onChange={(e) =>
@@ -60,16 +62,21 @@ function ExpenseModal({
           />
         </div>
         <div className="row">
-          <input
-            type="text"
-            placeholder="Category"
+          <select
             value={expenseData.category}
             onChange={(e) =>
               setExpenseData({ ...expenseData, category: e.target.value })
             }
-          />
+            name="category"
+          >
+            <option value="">Select Category</option>
+            <option value="Food">Food</option>
+            <option value="Entertainment">Entertainment</option>
+            <option value="Travel">Travel</option>
+          </select>
           <input
             type="date"
+            name="date"
             value={expenseData.date}
             onChange={(e) =>
               setExpenseData({ ...expenseData, date: e.target.value })

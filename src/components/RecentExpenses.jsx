@@ -26,7 +26,7 @@ function RecentExpenses() {
 
   return (
     <div className="recent-expenses">
-      <h2 style={{ fontStyle: "italic" }}>Recent Expenses</h2>
+      <h2 style={{ fontStyle: "italic" }}>Recent Transactions</h2>
       <div className="inner">
         {expenses.length === 0 ? (
           <p style={{ color: "#000" }}>No Transactions</p>
