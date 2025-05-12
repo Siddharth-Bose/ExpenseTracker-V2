@@ -5,9 +5,9 @@ import App from "./App.jsx";
 import { ExpenseProvider } from "./context/Expensecontext.jsx";
 
 createRoot(document.getElementById("root")).render(
-  <StrictMode>
-    <ExpenseProvider>
+  <ExpenseProvider>
+    <StrictMode>
       <App />
-    </ExpenseProvider>
-  </StrictMode>
+    </StrictMode>
+  </ExpenseProvider>
 );

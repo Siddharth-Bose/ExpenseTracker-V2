@@ -7,6 +7,7 @@ import TopExpenses from "./components/TopExpenses";
 
 function App() {
   return (
+    
     <div className="app-container">
       <h1>Expense Tracker</h1>
       <ExpenseSummary />
