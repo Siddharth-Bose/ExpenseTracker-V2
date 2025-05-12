@@ -4,7 +4,7 @@ import "./ExpenseSummary.css";
 import { prepareChartData } from "../utils/prepareChartData";
 import CustomPiChart from "./CustomPiChart";
 import SummaryCard from "./SummaryCard";
-import { useExpenses } from "../context/Expensecontext";
+import { useExpenses } from "../context/TempContext";
 import ExpenseModal from "./ExpenseModal";
 
 Modal.setAppElement("#root");
