@@ -81,7 +81,7 @@ A responsive expense management application built with **React**, enabling users
   - Input: type="number" with placeholder="Income Amount"
   - Button: type="submit" labeled "Add Balance"
 
--Add Expense Modal
+## Add Expense Modal
 Trigger button:
 `html
     <button type="button">+ Add Expense</button>
