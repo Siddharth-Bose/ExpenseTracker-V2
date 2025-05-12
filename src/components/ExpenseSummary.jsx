@@ -44,7 +44,7 @@ function ExpenseSummary() {
           title="Wallet Balance"
           amount={walletBalance}
           amountClass="summary-amount text-income"
-          buttonLabel="+Add Income"
+          buttonLabel="+ Add Income"
           buttonClass="summary-btn btn-income"
           onClick={() => setIsIncomeModalOpen(true)}
         />
@@ -53,7 +53,7 @@ function ExpenseSummary() {
           title="Expense"
           amount={totalExpense}
           amountClass="summary-amount text-expense"
-          buttonLabel="+Add Expense"
+          buttonLabel="+ Add Expense"
           buttonClass="summary-btn btn-expense"
           onClick={() => setIsExpenseModalOpen(true)}
         />
