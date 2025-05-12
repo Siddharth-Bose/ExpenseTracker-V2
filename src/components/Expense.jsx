@@ -8,6 +8,7 @@ import { formatDate } from "../utils/formatDate";
 const ExpenseItem = ({ item, Icon, onDelete, onEdit }) => {
   return (
     <div className="expense-item">
+      {/* Left section - Icon and details */}
       <div className="expense-left">
         <div className="expense-icon">{Icon && <Icon />}</div>
         <div className="expense-details">
@@ -16,18 +17,21 @@ const ExpenseItem = ({ item, Icon, onDelete, onEdit }) => {
         </div>
       </div>
 
+      {/* Right section - Amount and Action buttons */}
       <div className="expense-right">
         <h3 className="expense-amount">₹{item.amount}</h3>
-        <IconButton
-          icon={TiDeleteOutline}
-          bgColor="#FF3E3E"
-          onClick={() => onDelete(item.id)}
-        />
-        <IconButton
-          icon={MdOutlineModeEdit}
-          bgColor="#F4BB4A"
-          onClick={() => onEdit(item)}
-        />
+        <div className="expense-actions">
+          <IconButton
+            icon={TiDeleteOutline}
+            bgColor="#FF3E3E"
+            onClick={() => onDelete(item.id)}
+          />
+          <IconButton
+            icon={MdOutlineModeEdit}
+            bgColor="#F4BB4A"
+            onClick={() => onEdit(item)}
+          />
+        </div>
       </div>
     </div>
   );

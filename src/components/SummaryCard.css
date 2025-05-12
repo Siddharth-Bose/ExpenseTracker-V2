@@ -1,3 +1,4 @@
+/* Card Styling */
 .card {
   background: #9b9b9b;
   border-radius: 8px;
@@ -7,17 +8,26 @@
   max-width: 25em;
   min-height: 100%;
   height: 15em;
-  justify-content: center;
-  align-items: center;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   gap: 1.5em;
 }
 
-.card h2 {
-  font-size: 1.5em;
+/* Header Flexbox for Title and Amount */
+.card-header {
+  display: flex;
+  gap: 0.5em;
 }
 
+/* Title Styling */
+.card h2 {
+  font-size: 1.5em;
+  margin: 0;
+}
+
+/* Button Styling */
 .summary-btn {
   padding: 1em;
   width: 50%;
@@ -26,6 +36,7 @@
   color: white;
   font-weight: bold;
   cursor: pointer;
+  transition: background 0.3s ease; /* Added smooth transition on hover */
 }
 
 .btn-income {
@@ -36,10 +47,12 @@
   background: linear-gradient(90deg, #ff9595 0%, #ff4747 80%, #ff3838 100%);
 }
 
+/* Amount Styling */
 .summary-amount {
   font-weight: bold;
 }
 
+/* Text color classes for different types of amounts */
 .text-income {
   color: #9dff5b;
 }
@@ -48,6 +61,7 @@
   color: #f4bb4a;
 }
 
+/* Responsive Design */
 @media (min-width: 768px) {
   .card {
     width: 30%;

@@ -8,7 +8,40 @@
   justify-content: center;
   align-items: center;
 }
-/* test */
+
+.pieChart {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.legend-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1em;
+  flex-wrap: wrap;
+  min-width: 400px;
+  margin-top: 1em;
+}
+
+.legend-item {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 0.5em;
+}
+
+.legend-color-box {
+  width: 1em;
+  height: 1em;
+}
+
+.legend-text {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
 @media (min-width: 768px) {
   .custom-pie-container {
     width: 250px;

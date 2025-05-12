@@ -19,7 +19,7 @@ function RecentExpenses() {
   const handleEdit = (item) => {
     setExpenseData({
       ...item,
-      amount: item.amount.toString(), // To keep input value string-compatible
+      amount: item.amount,
     });
     setIsModalOpen(true);
   };

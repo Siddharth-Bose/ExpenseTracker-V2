@@ -1,3 +1,5 @@
+// Prepares chart data by aggregating total expenses per category.
+
 export const prepareChartData = (expenses) => {
   const categoryTotals = {};
 
@@ -10,6 +12,7 @@ export const prepareChartData = (expenses) => {
     }
   });
 
+  // Convert the totals object into an array of category-value pairs
   return Object.keys(categoryTotals).map((category) => ({
     category,
     value: categoryTotals[category],

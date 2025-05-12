@@ -1,8 +1,7 @@
 import React, { useEffect } from "react";
 import Modal from "react-modal";
-import "./ExpenseModal.css";
 
-// Your custom modal
+// Custom Modal for adding or editing expense
 function ExpenseModal({
   isOpen,
   onClose,
@@ -11,8 +10,11 @@ function ExpenseModal({
   onSubmit,
   mode,
 }) {
+  // Handle form submission
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    // Validation: Check if all required fields are filled
     if (
       !expenseData.title ||
       !expenseData.amount ||
@@ -22,11 +24,14 @@ function ExpenseModal({
       alert("Please fill in all fields!");
       return;
     }
+
+    // Call the onSubmit function passed via props
     onSubmit();
   };
 
+  // useEffect to reset form data when the modal is closed
   useEffect(() => {
-    // Reset expense data when modal closes
+    // Reset expense data when modal is closed
     if (!isOpen) {
       setExpenseData({ title: "", amount: "", category: "", date: "" });
     }
@@ -34,38 +39,46 @@ function ExpenseModal({
 
   return (
     <Modal
-      isOpen={isOpen}
-      onRequestClose={onClose}
-      className="custom-modal"
-      overlayClassName="custom-overlay"
+      isOpen={isOpen} // Modal visibility based on isOpen prop
+      onRequestClose={onClose} // Close modal when clicked outside
+      className="custom-modal" // Custom styles for modal
+      overlayClassName="custom-overlay" // Custom overlay styles
     >
+      {/* Modal title: Dynamic based on mode ("edit" or "add") */}
       <h2>{mode === "edit" ? "Edit Expense" : "Add Expense"}</h2>
+
       <form className="row" onSubmit={(e) => handleSubmit(e)}>
         <div className="row">
+          {/* Title input field */}
           <input
             type="text"
             placeholder="Title"
             name="title"
-            value={expenseData.title}
-            onChange={(e) =>
-              setExpenseData({ ...expenseData, title: e.target.value })
+            value={expenseData.title} // Bind to title state
+            onChange={
+              (e) => setExpenseData({ ...expenseData, title: e.target.value }) // Update title in state
             }
           />
+
+          {/* Price (amount) input field */}
           <input
             type="number"
             name="price"
             placeholder="Price"
-            value={expenseData.amount}
-            onChange={(e) =>
-              setExpenseData({ ...expenseData, amount: e.target.value })
+            value={expenseData.amount} // Bind to amount state
+            onChange={
+              (e) => setExpenseData({ ...expenseData, amount: e.target.value }) // Update amount in state
             }
           />
         </div>
+
         <div className="row">
+          {/* Category select dropdown */}
           <select
-            value={expenseData.category}
-            onChange={(e) =>
-              setExpenseData({ ...expenseData, category: e.target.value })
+            value={expenseData.category} // Bind to category state
+            onChange={
+              (e) =>
+                setExpenseData({ ...expenseData, category: e.target.value }) // Update category in state
             }
             name="category"
           >
@@ -74,19 +87,25 @@ function ExpenseModal({
             <option value="Entertainment">Entertainment</option>
             <option value="Travel">Travel</option>
           </select>
+
+          {/* Date input field */}
           <input
             type="date"
             name="date"
-            value={expenseData.date}
-            onChange={(e) =>
-              setExpenseData({ ...expenseData, date: e.target.value })
+            value={expenseData.date} // Bind to date state
+            onChange={
+              (e) => setExpenseData({ ...expenseData, date: e.target.value }) // Update date in state
             }
           />
         </div>
+
         <div className="row">
+          {/* Submit button */}
           <button className="cta-btn" type="submit">
             Add Expense
           </button>
+
+          {/* Cancel button */}
           <button onClick={onClose} className="cancel-btn">
             Cancel
           </button>
