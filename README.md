@@ -8,7 +8,7 @@ A responsive expense management application built with **React**, enabling users
 
 ### ✅ Wallet Balance
 
-- Default balance of **$5000**
+- Default balance of **₹5000**
 - Users can **add income** via a modal form
 - Real-time balance updates on expense/income actions
 - Alerts shown if spending exceeds current balance
@@ -72,7 +72,7 @@ A responsive expense management application built with **React**, enabling users
 - Only one `<h1>` tag with:  
   **`Expense Tracker`**
 - Wallet heading should be:  
-  **`Wallet Balance: 0.00`**
+  **`Wallet Balance: ₹0`**
 - Income button:
   ```html
   <button type="button">+ Add Income</button>
@@ -136,8 +136,8 @@ All updates are automatically synced to `localStorage` via `useEffect`.
 
 ### 📸 Screenshots (Initial Render)
 
-![XExpense Tracker - Initial Render](https://github.com/Siddharth-Bose/XCounter/blob/main/public/initial%20render.png)
+![XExpense Tracker - Initial Render](https://github.com/Siddharth-Bose/XExpense-Tracker/blob/main/public/Screenshot%202025-05-12%20at%203.22.31%E2%80%AFPM.png)
 
 ### 📸 Screenshots (After adding income and expenses)
 
-![XExpense Tracker - After adding income and expenses](https://github.com/Siddharth-Bose/XCounter/blob/main/public/initial%20render.png)
+![XExpense Tracker - After adding income and expenses](https://github.com/Siddharth-Bose/XExpense-Tracker/blob/main/public/Screenshot%202025-05-12%20at%203.22.16%E2%80%AFPM.png)
