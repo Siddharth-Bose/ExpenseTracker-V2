@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { getIconComponent } from "../constants/icons";
 import Expense from "./Expense";
 import "./RecentExpenses.css";
-import { useExpenses } from "../context/TempContext";
+import { useExpenses } from "../context/ExpenseContext";
 import ExpenseModal from "./ExpenseModal";
 
 function RecentExpenses() {

@@ -2,7 +2,7 @@ import React from "react";
 import ProgressBar from "./ProgressBar";
 import { prepareChartData } from "../utils/prepareChartData";
 import "./TopExpenses.css";
-import { useExpenses } from "../context/TempContext";
+import { useExpenses } from "../context/ExpenseContext";
 
 const TopExpenses = () => {
   const { expenses } = useExpenses();
